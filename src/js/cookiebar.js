@@ -3,12 +3,12 @@ jQuery(document).ready( function($){
 function cookiebar() {
 	window.addEventListener( "load", function() {
 	window.cookieconsent.initialise({
-	  position: "top",
+	  // position: "top",
 	  // static: true,
 	  content: {
-	    message: "Utilizamos cookies para assegurar uma melhor experiência de navegação.",
-	    dismiss: "Aceitar",
-	    link: "",
+	    // message: "Utilizamos cookies para assegurar uma melhor experiência de navegação.",
+	    // dismiss: "Aceitar",
+	    // link: "",
 	    // href: "www.delmaralmeida.com"
 	  },
 	  elements: {
@@ -21,7 +21,7 @@ function cookiebar() {
 		  link: '<a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{href}}" target="_blank">{{link}}</a>',
 		  close: '<span aria-label="dismiss cookie message" tabindex="0" class="cc-close">{{close}}</span>',
 		},
-		window: '<div role="dialog" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="d-flex justify-content-center cc-window {{classes}}">{{children}}</div>',
+		window: '<div role="dialog" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window {{classes}}">{{children}}</div>',
 	})});
 
 } cookiebar();

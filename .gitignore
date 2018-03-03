@@ -1,5 +1,6 @@
 /node_modules
 /src/plugins/advanced-custom-fields-pro
+/src/plugins/google-analytics-for-wordpress
 /src/vendor/bootstrap
 /src/vendor/cookieconsent
 /src/vendor/font-awesome-4

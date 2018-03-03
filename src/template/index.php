@@ -4,4 +4,18 @@
 
 <?php echo bloginfo( 'name' ); ?>
 
+<?php // brand ?>
+
+<?php // vídeo
+get_template_part( 'components/video' );
+
+
+?>
+
+
+
+<?php // controls ?>
+
+<?php // menu ?>
+
 <?php get_footer(); ?>

@@ -4,45 +4,20 @@
 	COOKIE BAR
 
 */
-.cc-window.cc-banner {
-	padding: 2px;
-}
-.cc-window.cc-floating {
-	padding: 15px;
-	text-align: center;
-}
 .cc-window {
-	font-size: 14px;
-	color: white;
-	background-color: black;
-
-	.cc-link {
-		display: none;
-	}
-
-	.cc-message {
-		flex: none;
-	}
+	color: $black;
+	background-color: $white;
 
 	.cc-compliance {
-		margin-left: 10px;
-
-		@include xs-only {
-			margin-left: 0;
-		}
-
 		a {
-			padding: 0 14px;
-			border: none;
-			border-radius: 2px;
-			color: white;
-			background-color: #424242;
+			border: 1px solid $black;
+			color: $black;
 			cursor: pointer;
 			transition: background-color .4s;
 
 			&:hover, &:focus {
 				text-decoration: none;
-				background-color: #6b6b6b;
+				background-color: rgba( $black, .2 );
 			}
 		}
 	}
@@ -58,172 +33,29 @@ h2, h3 {
 p {
 	font-family: lr, sans-serif;
 }
-header {
-	position: fixed;
-	top: 0;
-	z-index: -1;
-	min-height: 100vh;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	color: $white;
+/*
 
-	>.container {
-		position: relative;
+	VIDEO
 
-		>* {
-			margin-bottom: 20px;
-		}
+*/
+.player{
 
-		>h1>img {
-			height: 120px;
-			width: auto;
-		}
-
-		>ul {
-			position: absolute;
-			top: 20px;
-			right: 0;
-			z-index: 1;
-			padding: 0;
-			margin: 0;
-
-			>li>a>i {
-				position: relative;
-				padding: 16px;
-				margin: 0 4px;
-				width: 10px;
-				height: 10px;
-				color: $white;
-				border: 1px solid $white;
-				border-radius: 50px;
-
-				&:before {
-					position: absolute;
-					top: 7px;
-					left: 4px;
-					width: 23px;
-				}
-			}
-		}
-	}
-}
-.main {
-	margin-top: 100vh;
-	background-color: $white;
-
-	section {
-		padding: 40px 0;
-	}
-}
-.bg-color {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba( $black, .5 );
-}
-.hero {
-	h2 {
-		margin-bottom: 20px;
+	iframe,
+	.player-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
-	p {
-		font-family: lb, sans-serif;
-
-		@include lg {
-			font-family: lr, sans-serif;
-		}
+	iframe {
+		z-index: -2;
 	}
-}
-.gallery {
-	position: relative;
-	margin-bottom: 30px;
-
-	div {
-		height: 50vh;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-
-		@include sm {
-			height: 70vh;
-		}
+	.player-overlay {
+		z-index: -1;
+		background-color: #000;
+		opacity: 0.1;
 	}
 
-	p {
-		font-weight: bold;
-
-    @include lg {
-			position: absolute;
-			top: 0;
-	    left: 15px;
-	    width: calc( 100% - 30px );
- 	    padding: 15px;
-	    height: 100%;
-	    color: $white;
-	    background-color: $green;
-	    opacity: 0;
-
-	    &:hover,
-	    &:focus {
-	    	opacity: 1;
-	    }
-    }
-	}
-}
-form {
-	h2 {
-		margin-bottom: 20px;
-
-		p {
-			font-family: ar, sans-serif;
-		}
-	}
-	label {
-		font-weight: bold;
-	}
-	.send-input {
-		padding: 4px;
-		margin-top: 20px;
-		margin-bottom: 40px;
-		font-weight: bold;
-		color: $white;
-		background-color: $green;
-		border: none;
-		border-radius: 2px;
-		cursor: pointer;
-	}
-}
-blockquote {
-	padding: 30px;
-	font-size: 20px;
-	border-radius: 5px;
-	color: rgba( $black, .4);
-	background-color: rgba( $black, .05);
-
-	p {
-		margin-bottom: 20px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-footer {
-	padding: 40px 0;
-	background-color: $grey;
-
-	.container>div:first-child {
-		margin-bottom: 40px;
-	}
-
-	* {
-		color: $white;
-		
-		&:hover,
-		&:focus {
-			color: $white;
-		}
-	}
 }

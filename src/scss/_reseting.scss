@@ -25,6 +25,14 @@ p, label {
 
 */
 .admin-bar {
+	.player iframe,
+	.player .player-overlay {
+		top: 32px;
+
+		@media screen and ( max-width: 782px ) {
+			top: 46px;
+		}
+	}
 
 	.fixed {
 		top: 60px;
