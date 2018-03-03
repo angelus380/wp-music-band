@@ -8,7 +8,6 @@ function get_css_files() {
 
   wp_enqueue_style( 'cookieconsent', get_template_directory_uri() . '/vendor/cookieconsent/cookieconsent.min.css' );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/vendor/bootstrap/bootstrap.min.css' );
-  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/vendor/font-awesome-4/css/font-awesome.min.css' );
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css' );
 
 }
@@ -21,6 +20,8 @@ add_action( 'wp_enqueue_scripts', 'get_css_files' );
 function get_js_files() {
 
 	wp_enqueue_script( 'jquery', array(), null, true );
+
+  wp_enqueue_script( 'fontawesome-js', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array(), null, true );
   wp_enqueue_script( 'cookieconsent-js', get_template_directory_uri() . '/vendor/cookieconsent/cookieconsent.min.js', array(), null, true );
 	wp_enqueue_script( 'popper-js', get_template_directory_uri() . '/vendor/popper/popper.js', array(), null, true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/vendor/bootstrap/bootstrap.min.js', array(), null, true );

@@ -35,6 +35,74 @@ p {
 }
 /*
 
+	NAVBAR
+
+*/
+.player-menu {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: $black;
+
+	@include sm {
+		bottom: auto;
+		background-color: transparent;
+	}
+
+	a {
+		display: inline-block;
+		width: 40px;
+		padding: 10px;
+		margin-right: 3px;
+		border-radius: 2px;
+		font-size: 8vw;
+		background-color: $white;
+
+		&:hover, &:focus {
+			background-color: rgba( $white, .6 );
+		}
+
+		>svg {
+			display: block;
+			margin: auto;
+			color: $black;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include sm {
+			margin-right: 6px;
+			flex-basis: auto;
+			flex-grow: 0;
+			font-size: inherit;
+		}
+	}
+
+	a[href="#play"] {
+		display: none;
+	}
+	a[href="#pause"] {
+
+	}
+	a[href="#mute"] {
+
+	}
+	a[href="#unMute"] {
+		display: none;
+	}
+	a[href="#menu"] {
+
+		@include sm {
+			display: none;
+		}
+	}
+}
+/*
+
 	VIDEO
 
 */
@@ -52,10 +120,10 @@ p {
 	iframe {
 		z-index: -2;
 	}
+
 	.player-overlay {
 		z-index: -1;
 		background-color: #000;
 		opacity: 0.1;
 	}
-
 }
