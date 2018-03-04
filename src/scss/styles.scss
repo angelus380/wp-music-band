@@ -5,8 +5,16 @@
 
 */
 .cc-window {
+	margin: 10px;
+  width: auto;
+	font-size: 14px;
 	color: $black;
 	background-color: $white;
+  border: 1px solid;
+
+  &.cc-banner {
+  	width: auto;
+  }
 
 	.cc-compliance {
 		a {
@@ -27,6 +35,9 @@
 	FORMAT
 
 */
+body {
+	background-color: $black;
+}
 h2, h3 {
 	font-family: ar, sans-serif;
 }
@@ -38,26 +49,26 @@ p {
 	NAVBAR
 
 */
-.player-menu {
+.menu {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	margin: 0;
 	background-color: $black;
 
 	@include sm {
 		bottom: auto;
+		padding: 0;
 		background-color: transparent;
 	}
 
 	a {
 		display: inline-block;
-		width: 40px;
-		padding: 10px;
-		margin-right: 3px;
+		padding: 13px;
+		margin: 0 5px;
+		margin-bottom: 5px;
 		border-radius: 2px;
-		font-size: 8vw;
+		font-size: 7vw;
 		background-color: $white;
 
 		&:hover, &:focus {
@@ -70,11 +81,8 @@ p {
 			color: $black;
 		}
 
-		&:last-child {
-			margin-right: 0;
-		}
-
 		@include sm {
+			width: 40px;
 			margin-right: 6px;
 			flex-basis: auto;
 			flex-grow: 0;
@@ -100,21 +108,53 @@ p {
 			display: none;
 		}
 	}
+
+	.player-menu {
+		>div {
+			@include xs-only {
+				position: absolute;
+				bottom: 13px;
+			}
+		}
+	}
+
+	>div {
+		padding: 0;
+	}
+
+	.brand {
+		margin: auto;
+
+		@include sm {
+			width: 200px;
+			margin-bottom: 10px;
+		}
+
+		a {
+			width: auto;
+			margin: 0;
+			padding: 0;
+		}
+	}
 }
 /*
 
 	VIDEO
 
 */
-.player{
+.player {
 
 	iframe,
 	.player-overlay {
 		position: absolute;
-		top: 0;
+		top: 20%;
 		left: 0;
 		width: 100%;
-		height: 100%;
+
+		@include sm {
+			top: 0;
+			height: 100%;
+		}
 	}
 
 	iframe {

@@ -8,7 +8,7 @@ function cookiebar() {
 	  content: {
 	    // message: "Utilizamos cookies para assegurar uma melhor experiência de navegação.",
 	    // dismiss: "Aceitar",
-	    // link: "",
+	    link: "",
 	    // href: "www.delmaralmeida.com"
 	  },
 	  elements: {

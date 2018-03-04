@@ -2,19 +2,23 @@
 
 <?php get_header(); ?>
 
-<?php echo bloginfo( 'name' ); ?>
+<nav class="menu row text-center">
+	<div class="col-6 col-sm-12 text-center">
 
-<?php // brand ?>
+	<?php // brand
+	get_template_part( 'components/brand' ); ?>
+
+	</div>
+	<div class="col-6 col-sm-12 player-menu">
+
+	<?php // controls
+	get_template_part( 'components/player_controls' ); ?>
+
+	</div>
+</nav>
 
 <?php // vídeo
-get_template_part( 'components/video' );
-
-
-?>
-
-
-
-<?php // controls ?>
+get_template_part( 'components/video' ); ?>
 
 <?php // menu ?>
 

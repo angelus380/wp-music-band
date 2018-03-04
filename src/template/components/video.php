@@ -3,9 +3,7 @@
 <?php
 # create iframe
 $iframe = get_field( 'video', 'option', false );
-list( $link, $video_id ) = explode( "?v=", $iframe );
-
-get_template_part( 'components/player_controls' ); ?>
+list( $link, $video_id ) = explode( "?v=", $iframe ); ?>
 
 <div class="player">
 	<div class="player-overlay"></div>
