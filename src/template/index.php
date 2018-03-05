@@ -2,6 +2,9 @@
 
 <?php get_header(); ?>
 
+<?php // social
+get_template_part( 'components/social_network' ); ?>
+
 <nav class="menu row text-center">
 	<div class="col-6 col-sm-12 text-center">
 
@@ -20,6 +23,7 @@
 <?php // vídeo
 get_template_part( 'components/video' ); ?>
 
-<?php // menu ?>
+<?php // menu
+get_template_part( 'components/menu_items' ); ?>
 
 <?php get_footer(); ?>

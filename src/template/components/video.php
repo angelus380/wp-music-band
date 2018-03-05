@@ -26,6 +26,7 @@ function onYouTubeIframeAPIReady() {
 			'controls'	 		: 0,
 			'disablekb'	 		: 0,
 			'loop'			 		: 1,
+			'playlist'			: '<?php echo $video_id; ?>',
 			'rel'				 		: 0,
 			'showinfo'	 		: 0,
 			'autohide'	 		: 0,
@@ -44,6 +45,7 @@ function onYouTubeIframeAPIReady() {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   event.target.playVideo();
+  event.target.mute();
   player.setPlaybackQuality();
 }
 

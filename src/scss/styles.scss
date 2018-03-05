@@ -36,6 +36,7 @@
 
 */
 body {
+	overflow: hidden;
 	background-color: $black;
 }
 h2, h3 {
@@ -46,7 +47,72 @@ p {
 }
 /*
 
+	SOCIAL NETWORKS
+
+*/
+.social-networks {
+	justify-content: flex-end;
+	background-color: $black;
+
+	a {
+		display: inline-block;
+		padding: 3px 10px;
+		font-size: 20px;
+		color: $white;
+	}
+}
+/*
+
 	NAVBAR
+
+*/
+.menu-items {
+	background-color: $white;
+	flex-direction: column;
+	background-color: $white;
+
+	@include sm {
+		position: absolute;
+		right: -10px;
+		bottom: 0;
+		height: auto;
+		background-color: transparent;
+
+		li {
+			margin-bottom: 4px;
+			transition: transform ease .1s;
+
+			&:nth-child(even) {
+				transform: rotate(-2deg);
+			}
+			&:nth-child(odd) {
+				transform: rotate(3deg);
+			}
+		  &:hover,
+		  &:focus {
+			  transform: rotate(0deg);
+		  }
+		}
+
+		a {
+			padding: 8px 30px 8px 10px;
+			text-align: start;
+			color: $black;
+			background-color: $white;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+}
+/*
+
+	PLAYER CONTROLS
 
 */
 .menu {
@@ -62,7 +128,7 @@ p {
 		background-color: transparent;
 	}
 
-	a {
+	.controls a {
 		display: inline-block;
 		padding: 13px;
 		margin: 0 5px;
@@ -97,10 +163,10 @@ p {
 
 	}
 	a[href="#mute"] {
-
+		display: none;
 	}
 	a[href="#unMute"] {
-		display: none;
+
 	}
 	a[href="#menu"] {
 
