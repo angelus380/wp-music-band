@@ -8,7 +8,7 @@ if ( have_rows( $social, 'options' ) ) : ?>
 
   <ul class="nav social-networks">
   <?php
-  while( have_rows( $social, 'options' ) ) : the_row();
+  while ( have_rows( $social, 'options' ) ) : the_row();
   	$social_icon = get_sub_field( 'social_icon' );
   	$social_url  = get_sub_field( 'social_url' );
 

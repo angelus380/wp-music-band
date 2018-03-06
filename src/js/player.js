@@ -1,11 +1,6 @@
 jQuery(document).ready( function($){
 
 
-function player_full_screen() {
-	$('#player').requestFullScreen();
-} //player_full_screen();
-
-
 function player_keys() {
 
 var
@@ -19,8 +14,6 @@ var
 $controls.on( 'click', function(e) {
 	e.preventDefault();
 	$target = $(this).attr( 'href' );
-
-	console.log( $target );
 
 	switch ( $target ) {
 		case '#play' :
