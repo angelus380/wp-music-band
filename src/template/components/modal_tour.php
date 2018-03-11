@@ -21,7 +21,7 @@ if ( have_rows( 'tour', 'options' ) ) : ?>
 	    	<span class="col"><?php echo $tour_location; ?></span>
 
 	    	<?php if ( !empty( $tour_url ) ) : ?>
-          <span class="col-4 col-sm-3"><a class="color active-color active-border-color" href="<?php echo esc_url( $tour_url ); ?>">Check event</a></span>
+          <span class="col-4 col-sm-3"><a class="active-color bg-color" href="<?php echo esc_url( $tour_url ); ?>">Check event</a></span>
 	    	<?php endif; ?>
 
 	    </li>
