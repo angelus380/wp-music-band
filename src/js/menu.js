@@ -1,19 +1,30 @@
 jQuery(document).ready( function($){
+/*
 
+	OPEN AND CLOSE MAIN MENU
+
+*/
 function open_menu() {
 
 var
 	$open_menu 	= $( '.controls a[href="#menu"]' ),
+	$closed  		= $( '.closed' ),
+	$open 			= $( '.open' ),
 	$close_menu = $( '.close-sub-menu' ),
 	$menu_items = $( '.mobile-menu-items' )
 ;
 
 $open_menu.on( 'click', function() {
+	$(this).toggleClass( 'color' );
 	$menu_items.fadeToggle();
 });
 
 } open_menu();
+/*
 
+	OPEN AND CLOSE SUB MENUS
+
+*/
 function open_sub_menu() {
 
 var
@@ -25,10 +36,12 @@ var
 	$last_hash = false
 ;
 
+/* mobile menu */
 $mobile_menu.on( 'click', function() {
 	$(this).next().slideToggle();
 });
 
+/* browser menu */
 $browser_menu.on( 'click', function() {
 
 	var	$current_hash = $(this).attr( 'data-target' );
@@ -39,6 +52,7 @@ $browser_menu.on( 'click', function() {
 
 });
 
+/* close menu */
 $close_menu.on( 'click', function() {
 	$sub_menus.fadeOut();
 	$menu_items.css( 'z-index', '-3');

@@ -7,7 +7,6 @@ $tour = 'tour';
 if ( have_rows( $tour, 'options' ) ) : ?>
 <div class="sub-menu">
   <a class="close-sub-menu"><span>&times;</span></a>
-
   <ul class="nav menu-tour">
 
   <?php
