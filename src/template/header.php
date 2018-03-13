@@ -14,7 +14,16 @@
   <meta property="og:description" content="<?php echo get_field( 'description', 'options', false ); ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<?php echo get_permalink(); ?>" />
+  <?php
+  # get image brand
+  $brand = get_field( 'logo', 'options' );
+  if ( !empty( $brand ) ) : ?>
+  <meta property="og:image" content="<?php echo $brand['sizes']['large'];?>"/>
+  <?php
+  else : ?>
   <meta property="og:image" content="<?php echo get_template_directory_uri().'/screenshot.png';?>"/>
+  <?php
+  endif; ?>
 
 	<title><?php bloginfo( 'name' ) ?></title>
 	
